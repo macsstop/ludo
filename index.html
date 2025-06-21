@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ludo Finance</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+  <h1>🎲 Ludo Finance</h1>
+
+  <div id="sound-toggle">
+    <label><input type="checkbox" id="sound" checked /> Sound On/Off</label>
+  </div>
+
+  <div id="players">
+    <div class="player red">🔴 Doctor<br><span class="money" id="money-red">$100</span></div>
+    <div class="player blue">🔵 Engineer<br><span class="money" id="money-blue">$100</span></div>
+    <div class="player yellow">🟡 Lawyer<br><span class="money" id="money-yellow">$100</span></div>
+    <div class="player green">🟢 Plumber<br><span class="money" id="money-green">$100</span></div>
+  </div>
+
+  <div id="dice-area">
+    <img id="dice" src="dice1.png" alt="dice" />
+    <button onclick="rollDice()">🎲 Roll Dice</button>
+    <p id="dice-result">Waiting...</p>
+  </div>
+
+  <canvas id="fireworks" style="display: none;"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
